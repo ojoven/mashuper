@@ -34,7 +34,7 @@
             <a href="/mashups/create" id="create-mashup-header" class="btn btn-info btn-small">Create mashup &raquo;</a>
             <div class="nav-collapse collapse" id="main-menu">
                 <ul class="nav pull-right" id="main-menu-right">
-                    <li><a href="/mashups">Mashups</a></li>
+                    <li><a href="/mashups/random">Mashups</a></li>
                     <li><a href="/concepts">Concepts</a></li>
                 </ul>
             </div>
@@ -48,10 +48,11 @@
     </div>
 
     <div style="clear:both;">&nbsp;</div>
-    <footer id="footer">
-        <div class="text-right">Este es un proyecto de <a href="http://ojoven.es" target="_blank">ojoven.es</a> para <a href="http://creemos.org" target="_blank">Creemos.org</a></div>
-    </footer>
 </div> <!-- /container -->
+
+<footer id="footer">
+    <div class="text-right">Este es un proyecto de <a href="http://ojoven.es" target="_blank">ojoven.es</a> para <a href="http://creemos.org" target="_blank">Creemos.org</a></div>
+</footer>
 
 <div id="media-mobile"></div>
 </body>

@@ -51,17 +51,17 @@ function toLoadNewConcepts() {
 }
 
 function responseLoadNewConcepts(data) {
-	$("#concept1").val(data.concept_1);
-	$("#concept2").val(data.concept_2);
+	$("#concept_1").val(data.concept_1);
+	$("#concept_2").val(data.concept_2);
 	$(".form_concept").removeClass('to-white');
 }
 
 function toAddMashup() {
 	$("#to-add-mashup").click(function(e){
-		var concept1 = $("#concept1").val();
-		var concept2 = $("#concept2").val();
+		var concept_1 = $("#concept_1").val();
+		var concept_2 = $("#concept_2").val();
 		var mashup = $("#mashup").val();
-		if (concept1.trim()=='' || concept2.trim()=='' || mashup.trim()=='') {
+		if (concept_1.trim()=='' || concept_2.trim()=='' || mashup.trim()=='') {
 			alert("You've left any of the fields empty. Please fill all of them.");
 			e.preventDefault();
 			return false;

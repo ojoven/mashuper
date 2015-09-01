@@ -11,12 +11,11 @@
 |
 */
 
+// Direct routes
 Route::get('/', 'IndexController@index');
-
 Route::get('/concepts', 'ConceptsController@index');
+Route::get('mashups/view/{url_key}', 'MashupsController@view');
 
-// Mashups
+// Full Controllers
 Route::controller('mashups', 'MashupsController');
-
-// Concepts
 Route::controller('concepts', 'ConceptsController');
