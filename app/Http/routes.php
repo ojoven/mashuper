@@ -15,5 +15,8 @@ Route::get('/', 'IndexController@index');
 
 Route::get('/concepts', 'ConceptsController@index');
 
-// API calls
+// Mashups
 Route::controller('mashups', 'MashupsController');
+
+// Concepts
+Route::controller('concepts', 'ConceptsController');

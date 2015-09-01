@@ -1,9 +1,9 @@
 /** CONCEPTS **/
-function toAddConceptEvent() {
+function toAddConcept() {
 	$("#to-add-concept").click(function() {
 		var concept = $("#concept").val();
 		if (concept.trim()=='') {
-			alert('El vacío como concepto...es interesante.\nPero introduce una palabra, por favor.');
+			alert("Emptiness as a concept...mmmm, it's interesting. \But please, enter a word.");
 		} else {
 			addConcept(concept);
 		}
@@ -12,8 +12,11 @@ function toAddConceptEvent() {
 
 function addConcept(concept) {
 	var url = urlBase + '/concepts/add';
+	var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+
 	$.post(url, {
-		concept:concept
+		concept:concept,
+		_token: CSRF_TOKEN
 	}, function(data) {
 		responseAddConcept(data);
 	});
@@ -21,14 +24,15 @@ function addConcept(concept) {
 }
 
 function responseAddConcept(data) {
-	data = eval('(' + data + ')');
+
 	if (data.valid) {
 		$("#concept").val('');
 		numConcepts++;
 		$("#concept-table-body").prepend('<tr><td>'+numConcepts+'</td><td>'+data.concept+'</td></tr>');
 	} else {
-		alert('Ese concepto ya está añadido');
+		alert('That concept was already added, please enter a new one.');
 	}
+
 	$("#concept").focus();
 	return false;
 }
@@ -74,4 +78,5 @@ function toAddMashup() {
 $(document).ready(function() {
 	toLoadNewConcepts();
 	toAddMashup();
+	toAddConcept();
 });
