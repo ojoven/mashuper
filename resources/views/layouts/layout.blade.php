@@ -14,8 +14,6 @@
 
     <!-- Le styles -->
 
-    <link href="/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="/css/bootstrap-responsive.min.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/css/style.css" media="screen" rel="stylesheet" type="text/css" />
 
     <!-- Le favicon -->

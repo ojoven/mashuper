@@ -40,13 +40,10 @@ function responseAddConcept(data) {
 /** MASHUPS **/
 function toLoadNewConcepts() {
 	$("#to-load-new-concepts").click(function() {
-		$("#concept1").animate({ color:'#ffffff' }, 400);
-		$("#concept2").animate({ color:'#ffffff' }, 400);
+		$(".form_concept").addClass('to-white');
 
 		var url = urlBase + '/concepts/load';
-		$.post(url, {
-
-		}, function(data) {
+		$.get(url, {}, function(data) {
 			responseLoadNewConcepts(data);
 		});
 		return false;
@@ -54,12 +51,9 @@ function toLoadNewConcepts() {
 }
 
 function responseLoadNewConcepts(data) {
-	data = eval('(' + data + ')');
-	$("#concept1").val(data.concept1);
-	$("#concept1").animate({ color:'#444444' }, 400);
-
-	$("#concept2").val(data.concept2);
-	$("#concept2").animate({ color:'#444444' }, 400);
+	$("#concept1").val(data.concept_1);
+	$("#concept2").val(data.concept_2);
+	$(".form_concept").removeClass('to-white');
 }
 
 function toAddMashup() {

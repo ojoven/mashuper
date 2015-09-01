@@ -1,8 +1,8 @@
 <form action="/mashups/add" method="post">
     <div class="span8">
         <div class="span8">
-            <input id="concept1" name="concept1" class="simple_field" type="text" placeholder="Concept 1" value="" />
-            <input id="concept2" name="concept2" class="simple_field" type="text" placeholder="Concept 2" value="" />
+            <input id="concept1" name="concept1" class="form_concept simple_field" type="text" placeholder="Concept 1" value="" />
+            <input id="concept2" name="concept2" class="form_concept simple_field" type="text" placeholder="Concept 2" value="" />
             <a id="to-load-new-concepts" class="btn btn-inverse" href="#"><i class="icon-white icon-refresh"></i></a>
         </div>
         <div class="span8">

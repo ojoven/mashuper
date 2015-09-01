@@ -29,15 +29,14 @@ class ConceptsController extends Controller {
         return response()->json($response);
     }
 
-    public function loadAction() {
+    public function getLoad() {
 
-        $conceptModel = new Default_Model_Concept();
+        $conceptModel = new Concept();
         $concepts = $conceptModel->getTwoRandomConcepts();
-        $data['concept1'] = $concepts[0]['concept'];
-        $data['concept2'] = $concepts[1]['concept'];
-        echo json_encode($data);
-        $this->_helper->layout->disableLayout();
-        $this->_helper->viewRenderer->setNoRender(true);
+        $data['concept_1'] = $concepts[0]['concept'];
+        $data['concept_2'] = $concepts[1]['concept'];
+
+        return response()->json($data);
     }
 
 }

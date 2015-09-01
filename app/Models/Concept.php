@@ -13,6 +13,19 @@ class Concept extends Model {
         return $concepts;
     }
 
+    public function getTwoRandomConcepts() {
+
+        $count = $this->count();
+        if ($count == 0)
+            return false;
+
+        $randIndex = rand(0, $count-2);
+        $concepts = $this->skip($randIndex)->take(2)->get()->toArray();
+
+        return $concepts;
+
+    }
+
     /** ADD **/
     public function addConcept($concept) {
 
