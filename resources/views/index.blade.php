@@ -13,8 +13,6 @@
 
 <div class="line-separator"></div>
 
-<?php
-// echo $this->render_own("create", "partial", "default");
-?>
+@include('partials.create')
 
 @stop

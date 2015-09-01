@@ -1,0 +1,125 @@
+.navbar-inner {
+  border-radius: 0px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+h3 {
+  color: #999;
+}
+h3.quick-title {
+  margin: 20px 0 -10px;
+}
+[class*="span"] {
+  float: none;
+  margin: 10px auto;
+  text-align: center;
+}
+input.simple_field {
+  width: 235px;
+  margin: 5px;
+}
+#to-load-new-concepts {
+  margin: 5px;
+}
+textarea.simple_field {
+  width: 550px;
+}
+.line-separator {
+  margin: 20px 0;
+  border: 2px solid #FF2A06;
+}
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  margin: 1px 0px 2px 0;
+}
+footer {
+  border-top: 4px solid #e0e0e0;
+  padding: 10px;
+  margin: 50px 0 10px;
+}
+.circles-container {
+  width: 500px;
+  height: 230px;
+  margin: 20px auto;
+}
+.plus-sign {
+  color: #FF2A06;
+  font-size: 60px;
+  float: left;
+  margin: 100px 0;
+}
+.concept-circle {
+  border-radius: 100%;
+  border: 1px solid #e0e0e0;
+  font-size: 24px;
+  width: 200px;
+  height: 200px;
+  display: table;
+  float: left;
+  margin: 10px;
+}
+.concept-circle div {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.mashup-text {
+  font-size: 18px;
+  width: 600px;
+  margin: 40px auto 0;
+  clear: both;
+  text-align: center;
+}
+#create-mashup-header {
+  float: left;
+  margin-top: 8px;
+}
+.navbar .btn-navbar {
+  margin-right: -10px;
+}
+@media only screen and (max-width: 1024px) {
+  body {
+    padding: 0;
+  }
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  textarea.simple_field {
+    width: 90%;
+  }
+  .circles-container {
+    width: 90%;
+    height: inherit;
+  }
+  .concept-circle {
+    float: none;
+    margin: 10px auto;
+  }
+  .plus-sign {
+    margin: 16px auto;
+    text-align: center;
+    clear: both;
+    float: none;
+    height: 30px;
+  }
+  .mashup-text {
+    width: 90%;
+  }
+}
