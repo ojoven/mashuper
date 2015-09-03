@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MashupFav;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
@@ -53,6 +54,18 @@ class MashupsController extends Controller {
 
         if (!$response['valid']) abort(404);
         return redirect()->to('mashups/view/' . $response['url_key']);
+    }
+
+    public function postFav(Request $request) {
+
+        $mashupFav = $request->input();
+
+        $mashupFavModel = new MashupFav();
+        $response = $mashupFavModel->addMashupFav($mashupFav);
+
+        if (!$response['valid']) abort(404);
+        return redirect()->to('mashups/view/' . $response['url_key']);
+
     }
 
 }

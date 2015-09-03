@@ -3,7 +3,7 @@
 namespace App\Models;
 use App\Lib\Functions;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Concept;
+use App\Models\MashupFav;
 
 class Mashup extends Model {
 
@@ -11,8 +11,13 @@ class Mashup extends Model {
     public function getMashupByUrlKey($urlKey) {
 
         $mashup = self::where('url_key', '=', $urlKey)->first();
-        if ($mashup)
+        if ($mashup) {
+
             $mashup = $mashup->toArray();
+
+            $mashupFavModel = new MashupFav();
+            $mashup['num_favs'] = $mashupFavModel->getNumFavsMashup($mashup['id']);
+        }
 
         return $mashup;
     }
