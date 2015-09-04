@@ -8,8 +8,8 @@ class MashupFav extends Model {
     /** GET **/
     public function getNumFavsMashup($mashupId) {
 
-        $numMashups = self::where('mashup_id', '=', $mashupId)->count();
-
+        //$numMashups = self::where('mashup_id', '=', $mashupId)->count();
+        return 0;
         return $numMashups;
     }
 
