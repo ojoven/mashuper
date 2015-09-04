@@ -24,7 +24,7 @@
 <div class="separator">&nbsp;</div>
 <div class="span8">
     <var class="num-favs"><?php echo $mashup['num_favs']; ?></var>
-    <a href="#" id="to-fav-mashup" data-fav="1" class="btn">Mark as favourite</a>
+    <a href="#" id="to-fav-mashup" data-fav="1" data-mashup="<?php echo $mashup['id']; ?>" class="btn">Mark as favourite</a>
 </div>
 
 <div class="separator">&nbsp;</div>

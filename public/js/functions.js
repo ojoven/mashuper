@@ -71,11 +71,11 @@ function toAddMashup() {
 
 function toFavMashup() {
 	$("#to-fav-mashup").click(function(e){
-		var data = {};
 		var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
 		var url = urlBase + '/mashups/fav';
 		$.post(url, {
 			fav: $(this).data('fav'),
+			mashup_id: $(this).data('mashup'),
 			_token: CSRF_TOKEN
 		}, function(response) {
 			console.log(response);

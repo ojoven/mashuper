@@ -61,10 +61,9 @@ class MashupsController extends Controller {
         $mashupFav = $request->input();
 
         $mashupFavModel = new MashupFav();
-        $response = $mashupFavModel->addMashupFav($mashupFav);
+        $response = $mashupFavModel->handleMashupFav($mashupFav);
 
-        if (!$response['valid']) abort(404);
-        return redirect()->to('mashups/view/' . $response['url_key']);
+        return response()->json($response);
 
     }
 
