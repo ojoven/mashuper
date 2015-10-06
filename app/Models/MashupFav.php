@@ -13,17 +13,11 @@ class MashupFav extends Model {
         return $numMashups;
     }
 
-    public function hasUserFavedMashup($mashupId) {
-
-
-
-    }
-
     /** HANDLE **/
     public function handleMashupFav($params) {
 
         // Validation
-        if (!$this->_validateMashupFav($params)) return array('valid'=>false);
+        if (!$this->_validateMashupFav($params)) return array('valid' => false);
 
         // User Management
         $params = $this->_parseUserFav($params);
@@ -36,6 +30,7 @@ class MashupFav extends Model {
         }
 
         return $response;
+
     }
 
     /** ADD **/
@@ -66,7 +61,7 @@ class MashupFav extends Model {
     /** PRIVATE **/
     private function _validateMashupFav($params) {
 
-        if (!isset($params['user_id']) && (!$params['guest_id'] || strlen($params['guest_id'])<32)) return false;
+        if (!isset($params['user_id']) && (!isset($params['guest_id']) || !$params['guest_id'] || strlen($params['guest_id'])<32)) return false;
 
         $valid = true;
         return $valid;
