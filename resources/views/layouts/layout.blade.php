@@ -1,3 +1,7 @@
+<?php
+use \App\Models\User;
+?>
+
 <!DOCTYPE HTML>
 <html lang="es">
 <head>
@@ -40,7 +44,20 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a target="_blank" href="#">Login with Twitter</a></li>
+                    <?php if ($user = User::isUserLogged()) { ?>
+                        <li class="dropdown">
+                            <a href="#" class="header-user dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <img src="<?php echo str_replace("_normal.",".",$user->profile_image_url); ?>" />
+                                <span><?php echo $user->screen_name; ?></span>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/twitter/logout">Logout</a></li>
+                            </ul>
+                        </li>
+                    <?php } else { ?>
+                        <li><a href="/twitter/login">Login with Twitter</a></li>
+                    <?php } ?>
                 </ul>
 
             </div>

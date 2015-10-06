@@ -48,6 +48,15 @@ footer {
   margin-right:-10px;
 }
 
+.header-user {
+  img {
+    width: 30px;
+    height: 30px;
+    @include rounded-corners(7px);
+    margin: 0 5px;
+  }
+}
+
 /** FORMS **/
 input.simple_field {
   width:235px;

@@ -2935,6 +2935,8 @@ footer { background: #fff; border-top: 4px solid #e0e0e0; box-sizing: border-box
 
 .navbar .btn-navbar { margin-right: -10px; }
 
+.header-user img { width: 30px; height: 30px; -webkit-border-radius: 7px; -moz-border-radius: 7px; -ms-border-radius: 7px; -o-border-radius: 7px; border-radius: 7px; margin: 0 5px; }
+
 /** FORMS **/
 input.simple_field { width: 235px; margin: 5px; }
 

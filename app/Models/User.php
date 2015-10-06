@@ -2,14 +2,14 @@
 
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Session;
 
 class User extends Model {
 
     /** GET **/
     public static function isUserLogged() {
 
-        // TODO
-        return false;
+        return (Session::has('user')) ? Session::get('user') : false;
     }
 
     public static function getGuestId() {
