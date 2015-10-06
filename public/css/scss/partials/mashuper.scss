@@ -1,0 +1,120 @@
+/** BASE **/
+h1, h2, h3, h4, h5, h6 {
+  text-align:center;
+}
+
+h3 {
+  color:#999;
+  &.quick-title {
+    margin:20px 0 -10px;
+  }
+}
+
+/** LAYOUT **/
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+  width:940px;
+}
+
+footer {
+  background: #fff;
+  border-top: 4px solid #e0e0e0;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+}
+
+.line-separator {
+  margin:20px 0;
+  border:2px solid #5bc0de;
+}
+
+[class*="span"] {
+  float:none;
+  margin:10px auto;
+  text-align:center;
+}
+
+/** HEADER **/
+.navbar-inner {
+  border-radius:0px;
+}
+
+#create-mashup-header {
+  float:left;
+  margin-top:8px;
+}
+
+.navbar .btn-navbar {
+  margin-right:-10px;
+}
+
+/** FORMS **/
+input.simple_field {
+  width:235px;
+  margin:5px;
+}
+
+textarea.simple_field {
+  width:550px;
+}
+
+.form_concept {
+  @include transition(color, 300ms, ease-in);
+  &.to-white {
+    @include transition(color, 300ms, ease-in);
+    color: #fff;
+  }
+}
+
+/** IMAGES / ICONS **/
+[class^="icon-"], [class*=" icon-"] {
+  margin:1px 0px 2px 0;
+}
+
+/** SPECIFIC **/
+
+// HOME
+#to-load-new-concepts {
+  margin:5px;
+}
+
+// MASHUPS
+.circles-container {
+  width:500px;
+  height:230px;
+  margin:20px auto;
+}
+
+.plus-sign {
+  color:#5bc0de;
+  font-size:60px;
+  float:left;
+  margin: 64px 0;
+}
+
+.concept-circle {
+
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  font-size: 24px;
+  width: 200px;
+  height: 200px;
+  display: table;
+  float: left;
+  margin: 10px;
+  > div {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+}
+
+.mashup-text {
+  font-size:18px;
+  width:600px;
+  margin:40px auto 0;
+  clear:both;
+  text-align:center;
+}
+
