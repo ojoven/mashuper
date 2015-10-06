@@ -75,19 +75,21 @@ footer {
 }
 
 .concept-circle {
-	border-radius:100%;
-	border:1px solid #e0e0e0;
-	font-size:24px;
-	width:200px;
-	height:200px;
-	display:table;
-	float:left;
-	margin:10px;
-	div {
-		display:table-cell;
-		text-align:center;
-		vertical-align:middle;
-	}
+
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  font-size: 24px;
+  width: 200px;
+  height: 200px;
+  display: table;
+  float: left;
+  margin: 10px;
+  > div {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+  }
+
 }
 
 .mashup-text {
