@@ -1,0 +1,35 @@
+<?php $__env->startSection('title', 'View Mashup'); ?>
+
+<?php $__env->startSection('content'); ?>
+
+<div class="separator">&nbsp;</div>
+<h1>Mashup</h1>
+
+<div class="circles-container">
+    <div class="concept-circle">
+        <div><?php echo $mashup['concept_1']; ?></div>
+    </div>
+    <div class="plus-sign">+</div>
+    <div class="concept-circle">
+        <div><?php echo $mashup['concept_2']; ?></div>
+    </div>
+</div>
+
+<div class="mashup-text">
+    <?php echo $mashup['mashup']; ?>
+</div>
+
+<div class="separator">&nbsp;</div>
+<div class="span8">
+    <var class="num-favs"><?php echo $mashup['num_favs']; ?></var>
+    <a href="#" id="to-fav-mashup" data-fav="1" data-mashup="<?php echo $mashup['id']; ?>" class="btn">Mark as favourite</a>
+</div>
+
+<div class="separator">&nbsp;</div>
+<div class="span8">
+    <a href="/mashups/create" class="btn btn-info">Create mashup &raquo;</a>
+    <a href="/mashups/random" class="btn btn-primary">View next mashup &raquo;</a>
+</div>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
