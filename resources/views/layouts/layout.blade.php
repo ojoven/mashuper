@@ -22,6 +22,7 @@
 </head>
 
 <body>
+<!--
 <div class="navbar">
     <div class="navbar-inner">
         <div class="container">
@@ -38,6 +39,31 @@
                     <li><a href="/concepts">Concepts</a></li>
                 </ul>
             </div>
+        </div>
+    </div>
+</div>
+-->
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="../">Mashuper</a>
+            <button data-target="#navbar-main" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar-main" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../mashups/create">Create mashup &raquo;</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a target="_blank" href="#">Login with Twitter</a></li>
+            </ul>
+
         </div>
     </div>
 </div>

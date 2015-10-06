@@ -1,8 +1,8 @@
-@import 'partials/bootstrap';
+@import 'partials/bootswatch';
 @import 'partials/bootstrap-responsive.min';
 @import 'partials/mixins';
 
-/** Color: #FF2A06 **/
+/** Color: #5bc0de **/
 
 .navbar-inner {
 	border-radius:0px;
@@ -40,7 +40,7 @@ textarea.simple_field {
 
 .line-separator {
 	margin:20px 0;
-	border:2px solid #FF2A06;
+	border:2px solid #5bc0de;
 }
 
 .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
@@ -52,12 +52,10 @@ textarea.simple_field {
 }
 
 footer {
+  background: #fff;
   border-top: 4px solid #e0e0e0;
-  bottom: 0;
   box-sizing: border-box;
-  left: 0;
   padding: 10px;
-  position: absolute;
   width: 100%;
 }
 
@@ -68,10 +66,10 @@ footer {
 }
 
 .plus-sign {
-	color:#FF2A06;
+	color:#5bc0de;
 	font-size:60px;
 	float:left;
-	margin: 100px 0;
+	margin: 64px 0;
 }
 
 .concept-circle {
